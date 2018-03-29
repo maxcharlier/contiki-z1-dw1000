@@ -1730,7 +1730,7 @@ dw_read_otp_32(uint16_t otp_addr)
 {
   static const uint8_t cmd[] = {
     /* Enable manual read */
-    DW_OTPRDEN_MASK || DW_OTPREAD_MASK,
+    DW_OTPRDEN_MASK | DW_OTPREAD_MASK,
     /* Do the actual read */
     DW_OTPREAD_MASK,
     /* Reset otp_ctrl */
